@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+
+  background-color: $color-gray-lightest;
+  border: 2px solid $color-gray-lighter;
+
+  font-size: $font-size;
+
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: $space-small;
+  }
+}
+
+.button_active {
+  border-color: $color-gray;
+}
+
+.button_icon {
+  padding: 0.5em 0.5em;
+  line-height: 0;
+}

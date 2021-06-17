@@ -1,0 +1,25 @@
+@use 'variables' as *;
+@use 'blocks/form';
+@use 'blocks/select';
+@use 'blocks/button';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  color: $color-gray-dark;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+}

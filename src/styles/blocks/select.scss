@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+$select-padding: $space-small;
+$select-padding-right: $space-large;
+
+.select {
+  position: relative;
+
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+    padding: $select-padding;
+    padding-right: $select-padding-right;
+    border: 2px solid $color-gray-lighter;
+    font-size: $font-size;
+    cursor: pointer;
+  }
+}
+
+.select::after {
+  display: flex;
+  align-items: center;
+  padding: 0 0.25rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  border: 2px solid $color-gray-lighter;
+  background-color: $color-gray-lightest;
+
+  color: $color-gray;
+  font-size: $font-size;
+  line-height: 0;
+
+  content: "⏷";
+  pointer-events: none;
+}
