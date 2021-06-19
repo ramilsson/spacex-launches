@@ -38,13 +38,6 @@ export function changeFilter(filter) {
   };
 }
 
-export function currentPageChanged(page) {
-  return {
-    type: types.CURRENT_PAGE_CHANGED,
-    payload: { page },
-  };
-}
-
 export function fetchLaunches(params) {
   return async function (dispatch) {
     dispatch(launchesLoading());

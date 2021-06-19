@@ -10,8 +10,6 @@ const initialState = {
     siteName: "",
   },
   totalLaunchesCount: 0,
-  currentPage: 1,
-  launchesPerPage: 12,
   error: null,
   isLoading: false,
 };
@@ -68,20 +66,13 @@ export function reducer(state = initialState, action) {
         currentPage: initialState.currentPage,
       };
     }
-    case types.CURRENT_PAGE_CHANGED: {
-      return {
-        ...state,
-        currentPage: action.payload.page,
-      };
-    }
     default: {
       return state;
     }
   }
 }
 
-export function selectLaunchesByPage(state) {
-  const { currentPage, launchesPerPage } = state;
-  const offset = getOffset(currentPage, launchesPerPage);
+export function selectLaunchesByPage(state, page, launchesPerPage) {
+  const offset = getOffset(page, launchesPerPage);
   return state.launches.slice(offset, offset + launchesPerPage);
 }
