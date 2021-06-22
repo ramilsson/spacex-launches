@@ -1,12 +1,12 @@
 @use "variables" as *;
 
-.form__field {
+.field {
   &:not(:last-child) {
-    margin-right: $space;
+    margin-bottom: $space;
   }
 }
 
-.form__label {
+.field__label {
   display: block;
   margin-bottom: $space-small;
   font-size: $font-size-small;
