@@ -1,7 +1,8 @@
-@use 'variables' as *;
-@use 'blocks/field';
-@use 'blocks/select';
-@use 'blocks/button';
+@use "variables" as *;
+@use "mixins" as *;
+@use "blocks/field";
+@use "blocks/select";
+@use "blocks/button";
 
 *,
 *::before,
@@ -16,10 +17,4 @@ html {
 
 body {
   margin: 0;
-}
-
-.container {
-  width: 90%;
-  max-width: $container-max-width;
-  margin: 0 auto;
 }
