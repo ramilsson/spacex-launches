@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+$badge-line-height: 1.2;
+$badge-padding-x: 0.5em;
+$badge-padding-y: 0.25em;
+
+$badge-margin: 16px;
+
+.badges {
+  .badge:not(:last-child) {
+    margin-right: $badge-margin;
+    margin-bottom: $badge-margin;
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: $badge-padding-y $badge-padding-x;
+
+  background-color: $color-gray-lightest;
+  border-radius: 2px;
+
+  color: $color-gray-dark;
+  font-size: $font-size;
+  white-space: nowrap;
+  text-decoration: none;
+}

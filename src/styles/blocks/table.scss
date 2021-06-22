@@ -1,0 +1,16 @@
+@use '../variables' as *;
+
+$table-padding-x: 1em;
+$table-padding-y: 1em;
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: $table-padding-y $table-padding-x;
+    border: 1px solid $color-gray-lighter;
+    text-align: left;
+  }
+}
