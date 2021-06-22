@@ -1,33 +1,18 @@
 @use 'variables' as *;
 
 $select-padding: $space-small;
-$select-padding-right: $space-large;
+$select-arrow-width: 32px;
 
-.select {
-  position: relative;
-
-  select {
-    -webkit-appearance: none;
-    appearance: none;
-    padding: $select-padding;
-    padding-right: $select-padding-right;
-    border: 2px solid $color-gray-lighter;
-    font-size: $font-size;
-    cursor: pointer;
-  }
-}
-
-.select::after {
-  display: flex;
-  align-items: center;
-  padding: 0 0.25rem;
+@mixin select-arrow {
+  width: $select-arrow-width;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   position: absolute;
   top: 0;
   right: 0;
-
-  border: 2px solid $color-gray-lighter;
-  background-color: $color-gray-lightest;
 
   color: $color-gray;
   font-size: $font-size;
@@ -35,4 +20,32 @@ $select-padding-right: $space-large;
 
   content: "⏷";
   pointer-events: none;
+}
+
+.select {
+  position: relative;
+
+  select {
+    width: 100%;
+    display: block;
+    padding: $select-padding;
+    padding-right: $select-arrow-width;
+
+    border: 2px solid $color-gray-lighter;
+
+    font-size: $font-size;
+
+    appearance: none;
+    cursor: pointer;
+  }
+}
+
+.select:hover {
+  select {
+    border: 2px solid $color-gray-light;
+  }
+}
+
+.select::after {
+  @include select-arrow;
 }
