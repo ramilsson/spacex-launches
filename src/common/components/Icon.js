@@ -1,4 +1,5 @@
 import icons from "common/icons.svg";
+import "./Icon.scss";
 
 export function Icon({
   name,
