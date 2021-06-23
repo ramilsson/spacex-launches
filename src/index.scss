@@ -1,4 +1,6 @@
 @use "variables" as *;
+@use 'utilities';
+@use "blocks/container";
 @use "blocks/field";
 @use "blocks/select";
 @use "blocks/button";
@@ -13,7 +15,7 @@
 
 html {
   font-family: sans-serif;
-  color: $color-gray-dark;
+  color: $color-default;
 }
 
 body {

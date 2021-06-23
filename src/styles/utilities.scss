@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+.text {
+  &_muted {
+    color: $color-gray;
+  }
+
+  &_success {
+    color: $color-success;
+  }
+
+  &_danger {
+    color: $color-danger;
+  }
+}
+
+.display_none {
+  display: none;
+}
