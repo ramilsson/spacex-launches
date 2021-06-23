@@ -6,10 +6,16 @@ $color-gray-dark: #343a3f;
 $color-gray-darker: #21272a;
 $color-gray-darkest: #121619;
 
+$color-default: $color-gray-dark;
 $color-primary: #da1e28;
+$color-success: #24a148;
+$color-danger: #fa4d56;
 
 $font-size: 1rem;
 $font-size-small: 0.8rem;
+$font-size-medium: 1.5rem;
+$font-size-big: 2rem;
+$font-size-large: 2.5rem;
 
 $container-max-width: 1200px;
 
@@ -18,3 +24,5 @@ $space-small: 8px;
 $space-medium: 24px;
 $space-big: 32px;
 $space-large: 48px;
+
+$breakpoint-mobile: 900px;
