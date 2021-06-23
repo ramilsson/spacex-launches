@@ -53,7 +53,7 @@ export function Pagination({ currentPage, pagesCount, onPageChange }) {
   }
 
   return (
-    <nav className="pagination" onClick={handleClick}>
+    <nav className="pagination buttons" onClick={handleClick}>
       {previousPageButton}
       {pageButtons}
       {nextPageButton}

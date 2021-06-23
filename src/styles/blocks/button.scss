@@ -1,5 +1,12 @@
 @use "variables" as *;
 
+.buttons {
+  .button {
+    margin-right: $space-small;
+    margin-bottom: $space-small;
+  }
+}
+
 .button {
   display: inline-block;
   padding: 0.5em 1em;
