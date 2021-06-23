@@ -1,0 +1,41 @@
+@use "variables" as *;
+
+$image-container-max-width: 300px;
+
+.launchPanel__links {
+  padding: $space-medium 0;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.launchPanel__caption {
+  display: flex;
+  justify-content: space-between;
+  padding: $space 0;
+}
+
+.launchPanel__rocketName {
+  margin: 0;
+}
+
+.launchPanel__imageContainer {
+  display: flex;
+  justify-content: center;
+  max-height: $image-container-max-width;
+  margin-left: -$space-medium;
+  margin-right: -$space-medium;
+  padding: $space 0;
+
+  background-color: $color-gray-lightest;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
