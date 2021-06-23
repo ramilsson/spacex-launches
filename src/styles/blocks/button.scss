@@ -10,6 +10,11 @@
   font-size: $font-size;
 
   cursor: pointer;
+  transition: border 0.25s ease-out;
+
+  &:hover {
+    border: 2px solid $color-gray-light;
+  }
 
   &:not(:last-child) {
     margin-right: $space-small;
