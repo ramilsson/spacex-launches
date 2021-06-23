@@ -1,0 +1,47 @@
+@use "variables" as *;
+
+$padding: $space-medium;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+.sidePanel {
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: white;
+
+  z-index: 1000;
+  overflow-y: scroll;
+  box-shadow: 4px 0px 8px 0px $shadow-color;
+  transition: transform 0.25s ease-out;
+
+  &_hide {
+    transform: translateX(-50vw);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100vw;
+
+    &_hide {
+      transform: translateX(-100vw);
+    }
+  }
+}
+.sidePanel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding;
+}
+
+.sidePanel__title {
+  margin: 0;
+  font-size: $font-size-big;
+}
+
+.sidePanel__content {
+  padding: $padding;
+  padding-top: 0;
+}
