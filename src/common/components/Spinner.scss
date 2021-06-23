@@ -1,0 +1,25 @@
+@use "variables" as *;
+@use "animations" as *;
+
+$spinner-size: 24px;
+$spinner-border-width: 2px;
+$spinner-speed: 800ms;
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $color-gray;
+
+  .spinner__icon {
+    display: inline-block;
+    width: $spinner-size;
+    height: $spinner-size;
+    vertical-align: text-bottom;
+    border: $spinner-border-width solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin $spinner-speed infinite linear;
+  }
+}
