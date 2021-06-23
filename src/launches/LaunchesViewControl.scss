@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+.launchesViewControl {
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
