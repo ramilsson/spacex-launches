@@ -1,3 +1,12 @@
+@use "variables" as *;
+
 .launchesFilterForm {
   display: flex;
+  * {
+    flex-grow: 1;
+  }
+
+  .field {
+    margin-right: $space-small;
+  }
 }

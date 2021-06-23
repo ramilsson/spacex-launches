@@ -1,10 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Spinner } from "common/components/Spinner";
 import { changeFilter } from "app/actions";
-import "launches/LaunchesFilterForm.scss";
+import "./LaunchesFilterForm.scss";
 
 export function LaunchesFilterForm() {
-  const { rockets, sites, filter } = useSelector((state) => state);
+  const { rockets, sites, filter, isLoading } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   function onSelectChange(e) {
@@ -31,8 +32,8 @@ export function LaunchesFilterForm() {
 
   return (
     <form className="launchesFilterForm form">
-      <div className="form__field">
-        <label className="form__label" htmlFor="rocketSelect">
+      <div className="field">
+        <label className="field__label" htmlFor="rocketSelect">
           Rocket:
         </label>
         <div className="select">
@@ -41,14 +42,15 @@ export function LaunchesFilterForm() {
             value={filter.rocketName}
             onChange={onSelectChange}
             id="rocketSelect"
+            disabled={isLoading && "disabled"}
           >
             <option value="">All rockets</option>
             {rocketSelectOptions}
           </select>
         </div>
       </div>
-      <div className="form__field">
-        <label className="form__label" htmlFor="siteSelect">
+      <div className="field">
+        <label className="field__label" htmlFor="siteSelect">
           Launch site:
         </label>
         <div className="select">
@@ -57,12 +59,14 @@ export function LaunchesFilterForm() {
             value={filter.siteName}
             onChange={onSelectChange}
             id="siteSelect"
+            disabled={isLoading && "disabled"}
           >
             <option value="">All launch sites</option>
             {siteSelectOptions}
           </select>
         </div>
       </div>
+      {isLoading && <Spinner />}
     </form>
   );
 }
