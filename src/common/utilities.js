@@ -15,3 +15,13 @@ export function getPagesCount(totalItemsCount, itemsPerPage) {
 export function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+export function splitAndCapitalize(string, separator = "_") {
+  function capitalizeFirstChar(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  const strings = string.split(separator).map(capitalizeFirstChar);
+  
+  return strings.join(" ");
+}
