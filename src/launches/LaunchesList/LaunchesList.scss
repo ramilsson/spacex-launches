@@ -1,0 +1,71 @@
+@use 'variables' as *;
+
+.launchesList {
+  
+  transition: opacity 0.25s ease-out;
+
+  &_loading {
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  .launch {
+    display: flex;
+    color: $color-default;
+    text-decoration: none;
+
+    &:not(:last-child) {
+      margin-bottom: $space;
+    }
+
+    &:hover {
+      .launch__image {
+        border: 2px solid $color-gray-lighter;
+      }
+
+      .launch__title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .launch__image {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 30%;
+    margin-right: $space;
+    padding: $space;
+    height: 200px;
+    border: 2px solid $color-gray-lightest;
+    transition: border 0.2s ease-out;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .launch__container {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  .launch__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .launch__title {
+    margin: 0;
+    color: $color-primary;
+  }
+
+  .launch__date {
+    color: $color-gray;
+    font-size: $font-size-small;
+  }
+}

@@ -1,0 +1,69 @@
+@use "variables" as *;
+
+.launchesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+
+  .launch {
+    position: relative;
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      .launch__title {
+        text-decoration: underline;
+      }
+      .launch__image {
+        border: 2px solid $color-gray-lighter;
+      }
+    }
+
+    &__image {
+      display: flex;
+      justify-content: center;
+      padding: $space;
+      height: 240px;
+      border: 2px solid $color-gray-lightest;
+      transition: border 0.2s ease-out;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    &__container {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+
+      display: block;
+      margin-right: 0;
+      padding: $space;
+
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    &__title {
+      margin: 0;
+    }
+
+    &__details {
+      margin-bottom: $space-small;
+    }
+
+    &__title,
+    &__details {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
